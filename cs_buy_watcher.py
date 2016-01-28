@@ -5,6 +5,7 @@
 import requests
 from bs4 import BeautifulSoup
 import sys
+import json
 
 DICEMASTERS_TEXT_URL = "http://www.coolstuffinc.com/buylist_text.php?pa=vbl&gn=mdm&dp=1"
 
@@ -14,6 +15,9 @@ def get_page(url):
     session = requests.Session()
     page = session.get(url)
     return BeautifulSoup(page.text)
+
+def dump_json_page(page):
+    """ simple function that takes the HTML and creates a JSON list"""
 
 
 def main(args = sys.argv[1:]):
