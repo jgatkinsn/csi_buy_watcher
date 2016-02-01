@@ -36,7 +36,7 @@ def extract_table_data(page):
                     card_data[DICEMASTERS_CONTENT_MAP[count]] = inner_data.string
 
             #check for empty card data for those weird rows, could filter elsewhere
-            if card_data != {}:
+            if card_data != {} and "Price" in card_data:
                 data.append(card_data)
 
     return data
