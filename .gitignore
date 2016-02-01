@@ -6,6 +6,9 @@ __pycache__/
 # vim back up swap files
 *.swp
 
+# test files
+*.json
+
 # C extensions
 *.so
 

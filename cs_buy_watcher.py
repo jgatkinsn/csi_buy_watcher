@@ -46,7 +46,8 @@ def main(args = sys.argv[1:]):
     """ Main routine for handle the parsing """
     page = get_page(DICEMASTERS_TEXT_URL)
     data_list = extract_table_data(page)
-    print(data_list)
+    with open("dicemasters.json","w") as data_file:
+        json.dump(data_list, data_file)
 
     return True
 
